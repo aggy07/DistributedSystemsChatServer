@@ -72,7 +72,8 @@ def broadcast(room_id, data):
 incoming_connections = Queue.Queue(maxsize=100)
 rooms = collections.OrderedDict()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('0.0.0.0', 8017))
+ip = socket.gethostbyname(socket.gethostname())
+sock.bind((ip, 7017))
 sock.listen(5)
 
 while True:
