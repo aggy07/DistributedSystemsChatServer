@@ -24,7 +24,7 @@ def handle_single_connection(socket, address):
             break
 
         elif data.startswith("HELO"):
-            socket.sendall("{0}\nIP:{1}\nPort:{2}\nStudentID:{3}".format(data.strip(), "10.62.0.40",str(address[1]),"17311644"))
+            socket.sendall("{0}\nIP:{1}\nPort:{2}\nStudentID:{3}".format(data.strip(), "10.62.0.40",str(9137),"17311644"))
             continue
 
         data = data.split('\n')
@@ -73,7 +73,7 @@ incoming_connections = Queue.Queue(maxsize=100)
 rooms = collections.OrderedDict()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ip = socket.gethostbyname(socket.gethostname())
-sock.bind((ip, 9127))
+sock.bind((ip, 9137))
 sock.listen(5)
 
 while True:
