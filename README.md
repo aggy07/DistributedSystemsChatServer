@@ -1,12 +1,12 @@
 Student ID:17311644  Name: Arvind Agaranallur Ganesan
 
-The Server is deployed as an Amazon Web Services EC2 Instance
+The Server is deployed on OpenNebula System
 
 Run start.sh to start the chat service
 
 Compile.sh is added in the repository but it is not needed
 
-The ServerHostname/IP of the EC2 Instance is ec2-18-216-150-171.us-east-2.compute.amazonaws.com
+The ServerHostname/IP of the Instance is 10.62.0.40
 
 The port Number is 9017
 
