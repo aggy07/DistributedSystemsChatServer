@@ -24,7 +24,7 @@ def handle_single_connection(socket, address):
             break
 
         elif data.startswith("HELO"):
-            socket.sendall("{0}\nIP:{1}\nPORT:{2}\nStudentID:{3}".format(data.strip(), "10.62.0.40",str(address[1]),"17311644")
+            socket.sendall("{0}\nIP:{1}\nPORT:{2}\nStudentID:{3}".format(data.strip(), "10.62.0.40",str(address[1]),"17311644"))
             continue
 
         data = data.split('\n')
