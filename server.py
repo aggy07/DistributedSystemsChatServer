@@ -73,7 +73,7 @@ incoming_connections = Queue.Queue(maxsize=100)
 rooms = collections.OrderedDict()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ip = socket.gethostbyname(socket.gethostname())
-sock.bind((ip, 7017))
+sock.bind((ip, 9017))
 sock.listen(5)
 
 while True:
