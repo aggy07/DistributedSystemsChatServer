@@ -75,6 +75,7 @@ rooms = collections.OrderedDict()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ip = socket.gethostbyname(socket.gethostname())
 port = sys.argv[1]
+port = int(port)
 sock.bind((ip, port))
 sock.listen(5)
 
