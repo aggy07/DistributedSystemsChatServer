@@ -3,6 +3,7 @@ from hashlib import md5
 import collections
 import socket
 import Queue
+import sys
 
 
 class ThreadHandler(threading.Thread):
@@ -73,7 +74,8 @@ incoming_connections = Queue.Queue(maxsize=100)
 rooms = collections.OrderedDict()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ip = socket.gethostbyname(socket.gethostname())
-sock.bind((ip, 9137))
+port = sys.argv[1]
+sock.bind((ip, port))
 sock.listen(5)
 
 while True:
