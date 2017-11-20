@@ -8,7 +8,7 @@ Compile.sh is added in the repository but it is not needed
 
 The ServerHostname/IP of the Instance is 10.62.0.40
 
-The port Number is 9137
+The port Number is given as an argument in start.sh file
 
 The screenshot of the Test Execution from provided is attached
 
