@@ -19,13 +19,15 @@ class ThreadHandler(threading.Thread):
 
 def handle_single_connection(socket, address):
     while True:
+        port = sys.argv[1]
+        port = int(port)
         data = socket.recv(2048).decode('utf-8')
         if data.startswith("KILL_SERVICE"):
             socket.close()
             break
 
         elif data.startswith("HELO"):
-            socket.sendall("{0}\nIP:{1}\nPort:{2}\nStudentID:{3}".format(data.strip(), "10.62.0.40",str(9137),"17311644"))
+            socket.sendall("{0}\nIP:{1}\nPort:{2}\nStudentID:{3}".format(data.strip(), "10.62.0.40",str(port),"17311644"))
             continue
 
         data = data.split('\n')
